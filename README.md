@@ -254,3 +254,5 @@ Assuming you created a Smart Mirror config file, you should already have the API
 	"widgets2":  ["0",  "6",  "-1",  "3"]
 	```
 8. On the Smart Mirror, login to your user and verify that the widget is showing up on the screen, and verify that data is being logged in the Developer Console. If you want to add this widget to the Smart Home Configurator, visit the [smart-mirror-config](https://github.com/kevintrankt/smart-mirror-config) repository and add the widget to `widgets` in `scripts.js`.
+
+If you are curious as to how we design the widget, you can view he component [here](https://github.com/kevintrankt/smart-mirror-electron/tree/master/src/app/forecast).
