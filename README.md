@@ -108,29 +108,36 @@ The following subsection will cover the process of setting up each provided widg
 
 ##### Clock
 ![clock widget](https://i.imgur.com/cMIsI26.png)
+
 The clock widget simply shows the time and date. This widget has no dependencies and can be placed anywhere on the Smart Mirror.
 
 ##### Weather
 ![weather widget](https://i.imgur.com/hFbQuTI.png)
+
 The weather widget shows the current temperature and weather for a location. This widget requires a Zip Code and the Weather API key, and it can be placed anywhere on the Smart Mirror.
 
 ##### News
 ![news widget](https://i.imgur.com/2C2miA9.png)
+
 The news widget shows popular news headlines with short descriptions if possible. This widget requires the News API key and should only be placed on the left or right side of the Smart Mirror.
 
 ##### Agenda
 ![agenda widget](https://i.imgur.com/l5zOnfx.png)
+
 The agenda widget shows your events for the day in an agenda view from Google Calendar. This widget requires an Import.io API key, the email of the Google Calendar, and it can be placed anywhere on the Smart Mirror. 
 
 ##### Subreddit
 ![subreddit widget](https://i.imgur.com/EAgkZoy.png)
+
 The subreddit widget displays the Hot posts on your selected subreddit. This widget requires a subreddit, and it should only be placed on the left or right side of the Smart Mirror.
 ##### Destination
 ![destination widget](https://i.imgur.com/QQ1ABKT.png)
+
 The destination widget displays a live estimated travel time to a location using Google Maps. This widget requires a Google Maps route URL, a destination name, and an Import.io API key, and it can be placed anywhere on the Smart Mirror. To get a Google Maps route URL, you can go to https://maps.google.com, enter a starting and ending destination, and copying the URL.
 
 ##### Forecast
 ![forecast widget](https://i.imgur.com/xpVrMLy.png)
+
 The forecast widget displays the upcoming 5 day forecast. This widget requires the Weather API key and a zip code, and the widget should be placed on either the left or right side of the Smart Mirror.
 ### Making a Custom Widget
 For this example, we'll be going through the process of making a vertical forecast widget using Open Weather Map's forecast API: https://openweathermap.org/forecast5.
