@@ -9,6 +9,23 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime velit earum rep
 	 - Optional
  - Installation
 	 - Hardware Setup
+	 - Software Setup
+ - Smart Mirror Config
+	 - Adding/Removing a User
+	 - Saving Your Config
+	 - Loading an Existing Config
+	 - API Keys
+	 - Users
+	 - Widget Layout
+	 - Widgets
+		 - Clock
+		 - Weather
+		 - News
+		 - Agenda
+		 - Subreddit
+		 - Destination
+		 - Forecast
+ - Making a Custom Widget
 
 
 ### Repositories
