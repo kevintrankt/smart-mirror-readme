@@ -1,4 +1,4 @@
-## Voice Enabled Smart Mirror
+## [Voice Enabled Smart Mirror](https://github.com/kevintrankt/smart-mirror-readme)
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime velit earum repellendus reiciendis esse id molestiae tempora ullam amet veritatis iure temporibus consectetur, quas, nesciunt, quod et quae soluta qui. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime velit earum repellendus reiciendis esse id molestiae tempora ullam amet veritatis iure temporibus consectetur, quas, nesciunt, quod et quae soluta qui.
 ### Table of Contents
 
