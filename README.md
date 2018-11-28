@@ -69,5 +69,13 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime velit earum rep
 	npm install -g @angular/cli
 	npm install
 	```
-6. Create a Smart Mirror config file by navigating to https://kevintrankt.com/smart-mirror-config. You can read more about 
+6. Create a Smart Mirror config file by navigating to https://kevintrankt.com/smart-mirror-config. You can read more about how to set up users in the user config in the next section.
+7. Verify your installation by running the following command in the terminal. If everything worked perfectly, you should now have a functioning Smart Mirror! 
+You can test logging into each account by typing numbers associated to the user and pressing space to logout. 
+
+The following steps will cover how to integrate facial recognition with OpenCV and voice control with Amazon Alexa with the Smart Mirror.
+
+8. TODO: Add OpenCV README
+9. TODO: Add Amazon Alexa README
+  
 ### User Config
