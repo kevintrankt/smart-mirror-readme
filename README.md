@@ -1,5 +1,5 @@
 ## [Voice Enabled Smart Mirror](https://github.com/kevintrankt/smart-mirror-readme)
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime velit earum repellendus reiciendis esse id molestiae tempora ullam amet veritatis iure temporibus consectetur, quas, nesciunt, quod et quae soluta qui. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime velit earum repellendus reiciendis esse id molestiae tempora ullam amet veritatis iure temporibus consectetur, quas, nesciunt, quod et quae soluta qui.
+This README will provide users with the steps and tools needed to set up their own Voice Enabled Smart Mirror.
 ### Table of Contents
 
  - Repositories
@@ -33,7 +33,8 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime velit earum rep
  - [smart-mirror-electron](https://github.com/kevintrankt/smart-mirror-electron)
  - [smart-mirror-config](https://github.com/kevintrankt/smart-mirror-config)
 ### Requirements
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime velit earum repellendus reiciendis esse id molestiae tempora ullam amet veritatis iure temporibus consectetur, quas, nesciunt, quod et quae soluta qui.
+The Smart Mirror is designed to be an interactive project for educational purposes. Because of this, many requirements are optional to ensure anyone can clone the project and work on it with limited supplies. The Smart Mirror is built using Electron which makes the frontend cross platform compatible with macOS, Linux, and Windows. 
+The requirements below are to build an actual Smart Mirror, but to develop and play with the Smart Mirror, you will only need the software requirements.
 #### Hardware 
 
  - [Raspberry Pi 3+](https://www.amazon.com/Raspberry-Pi-RASPBERRYPI3-MODB-1GB-Model-Motherboard/dp/B01CD5VC92/ref=sr_1_5?s=pc&ie=UTF8&qid=1543362710&sr=1-5&keywords=raspberry%20pi)
@@ -55,7 +56,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime velit earum rep
  - Import.io API Key
  
  ### Installation
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime velit earum repellendus reiciendis esse id molestiae tempora ullam amet veritatis iure temporibus consectetur, quas, nesciunt, quod et quae soluta qui.
+If you are cloning this project with only softare requirements, skip to step 3 in the Software Setup section.
 
 #### Hardware Setup
 
@@ -91,7 +92,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime velit earum rep
 8. Verify your installation by running the following command in the terminal. If everything worked perfectly, you should now have a functioning Smart Mirror! 
 You can test logging into each account by typing numbers associated to the user and pressing space to logout. 
 
-The following steps will cover how to integrate facial recognition with OpenCV and voice control with Amazon Alexa with the Smart Mirror.
+The following steps will cover how to integrate facial recognition with OpenCV and voice control with Amazon Alexa with the Smart Mirror. These steps are optional if you do not meet the hardware requirements.
 
 8. TODO: Add OpenCV README
 9. TODO: Add Amazon Alexa README
