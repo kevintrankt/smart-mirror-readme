@@ -141,6 +141,8 @@ sudo bash setup.sh config.txt
 ```
 15. Follow https://developer.amazon.com/docs/alexa-voice-service/build-the-avs-device-sdk.html for the rest of the installation process
 
+*Referenced from https://github.com/carolinedunn/Alexa-RPi-AutoStart*
+
 The following steps will cover how to integrate facial recognition with OpenCV with the Smart Mirror. These steps are optional if you do not meet the hardware requirements.
 1. TODO: Add OpenCV README
 
