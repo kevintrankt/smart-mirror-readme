@@ -7,6 +7,7 @@ This README will provide users with the steps and tools needed to set up their o
 	 - Hardware
 	 - Software
 	 - Optional
+ - Usage
  - Installation
 	 - Hardware Setup
 	 - Software Setup
@@ -54,8 +55,12 @@ The requirements below are to build an actual Smart Mirror, but to develop and p
  - NewsAPI API Key
  - Open Weather Map API Key
  - Import.io API Key
- 
- ### Installation
+### Usage
+In the `smart-mirror-electron` directory, run the following command to start the Smart Mirror.
+```bash
+npm start
+```
+### Installation
 If you are cloning this project with only softare requirements, skip to step 3 in the Software Setup section.
 
 #### Hardware Setup
@@ -91,12 +96,16 @@ If you are cloning this project with only softare requirements, skip to step 3 i
 7. Copy the `config.json` file generated from the Smart Mirror Configurator to `/smart-mirror-electron/src/assets/`.
 8. Verify your installation by running the following command in the terminal. If everything worked perfectly, you should now have a functioning Smart Mirror! 
 You can test logging into each account by typing numbers associated to the user and pressing space to logout. 
+	```bash
+	npm start
+	```
 
 The following steps will cover how to integrate facial recognition with OpenCV and voice control with Amazon Alexa with the Smart Mirror. These steps are optional if you do not meet the hardware requirements.
 
 8. TODO: Add OpenCV README
 9. TODO: Add Amazon Alexa README
-  
+ 
+
 ### Smart Mirror Config
 The Smart Mirror is personalized for users using the [Smart Mirror Configurator](https://kevintrankt.com/smart-mirror-config/). This tool allows you to create or modify a config file to include any external API keys, add or remove users, and to personalize the Smart Mirror for each user. This section will cover how to create a config file using the configurator.
 
