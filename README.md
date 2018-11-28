@@ -304,5 +304,5 @@ Assuming you created a Smart Mirror config file, you should already have the API
 
 If you are curious as to how we design the widget, you can view the component [here](https://github.com/kevintrankt/smart-mirror-electron/tree/master/src/app/forecast).
 
-## Configuring and Running Alexa
+### Configuring and Running Alexa
 Please refer to [Smart Mirror Alexa README](https://github.com/juliebee1024/smart-mirror-alexa/blob/master/README.md) for how to run Alexa, add wake sound and notification of bootup, autobooting Alexa, and customizing Alexa.
