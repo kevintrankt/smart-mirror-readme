@@ -27,23 +27,29 @@ This README will provide users with the steps and tools needed to set up their o
 		 - Destination
 		 - Forecast
  - Making a Custom Widget
+ - Configuring and Running Alexa
 
 
 ### Repositories
 
  - [smart-mirror-electron](https://github.com/kevintrankt/smart-mirror-electron)
  - [smart-mirror-config](https://github.com/kevintrankt/smart-mirror-config)
+ - [smart-mirror-alexa](https://github.com/juliebee1024/smart-mirror-alexa/tree/master)
+ 
 ### Requirements
 The Smart Mirror is designed to be an interactive project for educational purposes. Because of this, many requirements are optional to ensure anyone can clone the project and work on it with limited supplies. The Smart Mirror is built using Electron which makes the frontend cross platform compatible with macOS, Linux, and Windows. 
 The requirements below are to build an actual Smart Mirror, but to develop and play with the Smart Mirror, you will only need the software requirements.
 #### Hardware 
 
- - [Raspberry Pi 3+](https://www.amazon.com/Raspberry-Pi-RASPBERRYPI3-MODB-1GB-Model-Motherboard/dp/B01CD5VC92/ref=sr_1_5?s=pc&ie=UTF8&qid=1543362710&sr=1-5&keywords=raspberry%20pi)
+ - [Raspberry Pi 3B+](https://www.amazon.com/Raspberry-Pi-RASPBERRYPI3-MODB-1GB-Model-Motherboard/dp/B01CD5VC92/ref=sr_1_5?s=pc&ie=UTF8&qid=1543362710&sr=1-5&keywords=raspberry%20pi)
  - [Acrylic See-Through Mirror](https://www.amazon.com/12-Acrylic-See-Through-Mirror/dp/B017ONH3EG)
  - Raspberry Pi Compatible Camera 
  - Raspberry Pi Compatible Microphone 
  - 1920 x 1080 Resolution Monitor
  - 8 GB or Larger microSD Storage
+ - 3.5mm Audio Cable
+ - Keyboard
+ - Mouse
  
 #### Software 
  - NPM (Additional dependencies will be installed using NPM)
@@ -55,6 +61,7 @@ The requirements below are to build an actual Smart Mirror, but to develop and p
  - NewsAPI API Key
  - Open Weather Map API Key
  - Import.io API Key
+ 
 ### Usage
 In the `smart-mirror-electron` directory, run the following command to start the Smart Mirror.
 ```bash
@@ -100,11 +107,42 @@ You can test logging into each account by typing numbers associated to the user 
 	npm start
 	```
 
-The following steps will cover how to integrate facial recognition with OpenCV and voice control with Amazon Alexa with the Smart Mirror. These steps are optional if you do not meet the hardware requirements.
+The following steps will cover how to integrate voice control with Amazon Alexa with the Smart Mirror. These steps are optional if you do not meet the hardware requirements.
+1. Run ` sudo apt-get upgrade ` to get the necessary updates on terminal in the Raspberry Pi
+2. Get necessary files:
+```bash
+wget https://raw.githubusercontent.com/juliebee1024/smart-mirror-alexa/master/pi.sh \
+wget https://raw.githubusercontent.com/juliebee1024/smart-mirror-alexa/master/setup.sh
+```
+3. Create a config file:
+```bash
+sudo nano config.txt
+```
+4. Copy and paste into the config file:
+```
+#NOTE: The Device Serial Number can be any unique number
+DEVICE_SERIAL_NUMBER=""
+CLIENT_ID=""
+PRODUCT_ID=""
+```
+5. Open a web browser and login to Amazon Developer (https://developer.amazon.com/avs/home.html#/avs/home) and click on your product
+6. Scroll down and copy & paste the **Product ID** into config.txt
+7. Click on "**Security Profile**" under the "Product Details" tab
+8. Scroll down and click on "**Other devices and platforms**"
+9. Copy & paste the **Client ID** into config.txt
+10. Enter any number (i.e. 123456) as the **Device Serial Number**
+11. Ctrl-o and enter to save
+12. Ctrl-x to exit
+13. Follow https://developer.amazon.com/docs/alexa-voice-service/input-avs-credentials.html starting at "**Download your credentials**" to get the config.json file
+14. In terminal, run the install script
+```bash
+cd /home/pi
+sudo bash setup.sh config.txt
+```
+15. Follow https://developer.amazon.com/docs/alexa-voice-service/build-the-avs-device-sdk.html for the rest of the installation process
 
-8. TODO: Add OpenCV README
-9. TODO: Add Amazon Alexa README
- 
+The following steps will cover how to integrate facial recognition with OpenCV with the Smart Mirror. These steps are optional if you do not meet the hardware requirements.
+1. TODO: Add OpenCV README
 
 ### Smart Mirror Config
 The Smart Mirror is personalized for users using the [Smart Mirror Configurator](https://kevintrankt.com/smart-mirror-config/). This tool allows you to create or modify a config file to include any external API keys, add or remove users, and to personalize the Smart Mirror for each user. This section will cover how to create a config file using the configurator.
@@ -264,4 +302,7 @@ Assuming you created a Smart Mirror config file, you should already have the API
 	```
 8. On the Smart Mirror, login to your user and verify that the widget is showing up on the screen, and verify that data is being logged in the Developer Console. If you want to add this widget to the Smart Home Configurator, visit the [smart-mirror-config](https://github.com/kevintrankt/smart-mirror-config) repository and add the widget to `widgets` in `scripts.js`.
 
-If you are curious as to how we design the widget, you can view he component [here](https://github.com/kevintrankt/smart-mirror-electron/tree/master/src/app/forecast).
+If you are curious as to how we design the widget, you can view the component [here](https://github.com/kevintrankt/smart-mirror-electron/tree/master/src/app/forecast).
+
+## Configuring and Running Alexa
+Please refer to [Smart Mirror Alexa README](https://github.com/juliebee1024/smart-mirror-alexa/blob/master/README.md) for how to run Alexa, add wake sound and notification of bootup, autobooting Alexa, and customizing Alexa.
