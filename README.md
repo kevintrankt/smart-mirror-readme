@@ -79,9 +79,59 @@ The following steps will cover how to integrate facial recognition with OpenCV a
 8. TODO: Add OpenCV README
 9. TODO: Add Amazon Alexa README
   
-### User Config
-The Smart Mirror is personalized for users using the [Smart Mirror Configurator](https://kevintrankt.com/smart-mirror-config/). This tool allows you to create or modify a config file to include any external API keys, add or remove users, and to personalize the Smart Mirror for each user. This section will
+### Smart Mirror Config
+The Smart Mirror is personalized for users using the [Smart Mirror Configurator](https://kevintrankt.com/smart-mirror-config/). This tool allows you to create or modify a config file to include any external API keys, add or remove users, and to personalize the Smart Mirror for each user. This section will cover how to create a config file using the configurator.
 
+
+#### Adding/Removing a User
+To add a user click on the User icon in the top left. To remove a user, click the X to the right of each user field.
+
+#### Saving Your Config
+There are two ways you can save your config: saving or copying to clipboard. To save the config, click the Save icon in the top right to save a `config.json` file. Move this file to `smart-mirror-electron/src/assets/` to change the settings for the Smart Mirror. To copy the config to your clipboard, click the Copy icon in the top right. You can now paste replace the contents of `smart-mirror-electron/src/assets/config.json` with the contents in your clipboard. 
+
+#### Loading an Existing Config
+You can load an existing config by choosing a file. This will populate all the fields with the information from your existing `config.json` file 
+
+#### API Keys
+Some widgets will require specific API keys to grab data properly. To get proper API keys, click on each API Key section label and follow the signup process to get a unique API key.
+
+#### Users
+Each user has their own personal settings for the Smart Mirror. The Smart Mirror supports up to 10 users. Each user has an ID starting from 0 up to 9. When setting up a user, you can optionally set a name and a login message.
+
+#### Widget Layout
+There are 8 possible locations for a widget to exist on the Smart Mirror. The Smart Mirror is divided into a grid of 3x3 where the outer cells are used to place widgets.
+
+#### Widgets
+Widgets are personalized for each user. Depending on the widget, certain API keys and settings are required.
+
+The following subsection will cover the process of setting up each provided widget.
+
+##### Clock
+![clock widget](https://i.imgur.com/cMIsI26.png)
+The clock widget simply shows the time and date. This widget has no dependencies and can be placed anywhere on the Smart Mirror.
+
+##### Weather
+![weather widget](https://i.imgur.com/hFbQuTI.png)
+The weather widget shows the current temperature and weather for a location. This widget requires a Zip Code and the Weather API key, and it can be placed anywhere on the Smart Mirror.
+
+##### News
+![news widget](https://i.imgur.com/2C2miA9.png)
+The news widget shows popular news headlines with short descriptions if possible. This widget requires the News API key and should only be placed on the left or right side of the Smart Mirror.
+
+##### Agenda
+![agenda widget](https://i.imgur.com/l5zOnfx.png)
+The agenda widget shows your events for the day in an agenda view from Google Calendar. This widget requires an Import.io API key, the email of the Google Calendar, and it can be placed anywhere on the Smart Mirror. 
+
+##### Subreddit
+![subreddit widget](https://i.imgur.com/EAgkZoy.png)
+The subreddit widget displays the Hot posts on your selected subreddit. This widget requires a subreddit, and it should only be placed on the left or right side of the Smart Mirror.
+##### Destination
+![destination widget](https://i.imgur.com/QQ1ABKT.png)
+The destination widget displays a live estimated travel time to a location using Google Maps. This widget requires a Google Maps route URL, a destination name, and an Import.io API key, and it can be placed anywhere on the Smart Mirror. To get a Google Maps route URL, you can go to https://maps.google.com, enter a starting and ending destination, and copying the URL.
+
+##### Forecast
+![forecast widget](https://i.imgur.com/xpVrMLy.png)
+The forecast widget displays the upcoming 5 day forecast. This widget requires the Weather API key and a zip code, and the widget should be placed on either the left or right side of the Smart Mirror.
 ### Making a Custom Widget
 For this example, we'll be going through the process of making a vertical forecast widget using Open Weather Map's forecast API: https://openweathermap.org/forecast5.
 
@@ -178,4 +228,4 @@ Assuming you created a Smart Mirror config file, you should already have the API
 	```json
 	"widgets2":  ["0",  "6",  "-1",  "3"]
 	```
-8. On the Smart Mirror, login to your user and verify that the widget is showing up on the screen, and verify that data is being logged in the Developer Console.
+8. On the Smart Mirror, login to your user and verify that the widget is showing up on the screen, and verify that data is being logged in the Developer Console. If you want to add this widget to the Smart Home Configurator, visit the [smart-mirror-config](https://github.com/kevintrankt/smart-mirror-config) repository and add the widget to `widgets` in `scripts.js`.
