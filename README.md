@@ -178,3 +178,4 @@ Assuming you created a Smart Mirror config file, you should already have the API
 	```json
 	"widgets2":  ["0",  "6",  "-1",  "3"]
 	```
+8. On the Smart Mirror, login to your user and verify that the widget is showing up on the screen, and verify that data is being logged in the Developer Console.
