@@ -116,21 +116,21 @@ The following steps will cover how to integrate voice control with Amazon Alexa 
 ##### Amazon Alexa
 1. Run ` sudo apt-get upgrade ` to get the necessary updates on terminal in the Raspberry Pi
 2. Get necessary files:
-```bash
-wget https://raw.githubusercontent.com/juliebee1024/smart-mirror-alexa/master/pi.sh \
-wget https://raw.githubusercontent.com/juliebee1024/smart-mirror-alexa/master/setup.sh
-```
+	```bash
+	wget https://raw.githubusercontent.com/juliebee1024/smart-mirror-alexa/master/pi.sh \
+	wget https://raw.githubusercontent.com/juliebee1024/smart-mirror-alexa/master/setup.sh
+	```
 3. Create a config file:
-```bash
-sudo nano config.txt
-```
+	```bash
+	sudo nano config.txt
+	```
 4. Copy and paste into the config file:
-```
-#NOTE: The Device Serial Number can be any unique number
-DEVICE_SERIAL_NUMBER=""
-CLIENT_ID=""
-PRODUCT_ID=""
-```
+	```
+	#NOTE: The Device Serial Number can be any unique number
+	DEVICE_SERIAL_NUMBER=""
+	CLIENT_ID=""
+	PRODUCT_ID=""
+	```
 5. Open a web browser and login to Amazon Developer (https://developer.amazon.com/avs/home.html#/avs/home) and click on your product
 6. Scroll down and copy & paste the **Product ID** into config.txt
 7. Click on "**Security Profile**" under the "Product Details" tab
@@ -141,10 +141,10 @@ PRODUCT_ID=""
 12. Ctrl-x to exit
 13. Follow https://developer.amazon.com/docs/alexa-voice-service/input-avs-credentials.html starting at "**Download your credentials**" to get the config.json file
 14. In terminal, run the install script
-```bash
-cd /home/pi
-sudo bash setup.sh config.txt
-```
+	```bash
+	cd /home/pi
+	sudo bash setup.sh config.txt
+	```
 15. Follow https://developer.amazon.com/docs/alexa-voice-service/build-the-avs-device-sdk.html for the rest of the installation process
 
 *Referenced from https://github.com/carolinedunn/Alexa-RPi-AutoStart*
