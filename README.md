@@ -162,11 +162,11 @@ You can test logging into each account by typing numbers associated to the user 
 
 *Referenced from https://github.com/carolinedunn/Alexa-RPi-AutoStart*
 
-*****The following steps will cover how to integrate facial recognition with OpenCV with the Smart Mirror. These steps are optional if you do not meet the hardware requirements.*****
+*The following steps will cover how to integrate facial recognition with OpenCV with the Smart Mirror. These steps are optional if you do not meet the hardware requirements.*
 
 #### Expand Filesystem (Optional)
 If using brand new/default Raspbian Stretch, make space on microSD card using following instructions. 
-```
+```bash
 sudo apt-get purge wolfram-engine
 sudo apt-get purge libreoffice*
 sudo apt-get clean
@@ -174,13 +174,13 @@ sudo apt-get autoremove
 ```
 
 #### Update Pi 
-```
+```bash
 sudo apt-get update
 sudo apt-get upgrade
 sudo rpi-update
 ```
 #### Install Dependencies 
-```
+```bash
 sudo apt-get install build-essential cmake pkg-config
 sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
 sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
@@ -190,15 +190,15 @@ sudo apt-get install libatlas-base-dev gfortran
 ```
 
 #### Setup Python3 Development and pip Tools 
-```
+```bash
 sudo apt-get install python3 python3-setuptools python3-dev
 ```
-```
+```bash
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 ```
 #### Download OpenCV 3.4.1 and OpenCV-contrib 
-```
+```bash
 cd ~
 wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.4.1.zip
 wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.4.1.zip
@@ -206,13 +206,13 @@ unzip opencv.zip
 unzip opencv_contrib.zip
 ```
 #### Install Python Packages
-```
+```bash
 sudo pip3 install numpy
 sudo pip3 install imutils
 sudo pip3 install sklearn
 ```
 #### Build OpenCV 
-```
+```bash
 cd ~/opencv-3.4.1/
 mkdir build
 cd build
@@ -225,30 +225,30 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 ```
 #### Increase Swap Space 
 Increase swap space from 100MB to 1024MB to facilitate compilation of OpenCV and prevent crashing on the Pi using nano editor. 
-```
+```bash
 sudo nano -w /etc/dphys-swapfile 
 ```
 Scroll down to "**CONF_SWAPSIZE**" and change value to 1024. Save file by using "**CTRL+O**" and then exit nano with "**CTRL+X**". 
 
 Activate new swap space: 
-```
+```bash
 sudo /etc/init.d/dphys-swapfile stop
 sudo /etc/init.d/dphys-swapfile start
 ```
 #### Compile and Install OpenCV 
 This process may take 2 to 3 hours. The Pi will get hot in the process, so be sure to provide cooling to the Pi. 
-```
+```bash
 make -j4
 ```
 Install OpenCV 
-```
+```bash
 sudo make install
 sudo ldconfig
 ```
 
 #### Test Successful OpenCV Installation 
 Open Python3 interpreter and enter the following to test successful installation. 
-```
+```python
 import cv2
 cv2.__version__
 ```
@@ -261,7 +261,7 @@ sudo /etc/init.d/dphys-swapfile stop
 sudo /etc/init.d/dphys-swapfile start
 ```
 Remove the downloaded zip files to free up space. 
-```
+```bash
 cd ~
 rm -rf opencv.zip opencv_contrib.zip
 ```
