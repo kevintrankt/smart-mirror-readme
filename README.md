@@ -9,6 +9,7 @@ The Voice Enabled Smart Mirror is a smart home project that allows information t
 	 - Software
 	 - Optional
  - Usage
+	 - Gestures
  - Installation
 	 - Hardware Setup
 	 - Software Setup
@@ -69,6 +70,8 @@ In the `smart-mirror-electron` directory, run the following command to start the
 ```bash
 npm start
 ```
+##### Gestures
+
 ### Installation
 If you are cloning this project with only softare requirements, skip to step 3 in the Software Setup section.
 
