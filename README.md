@@ -1,5 +1,6 @@
+
 ## [Voice Enabled Smart Mirror](https://github.com/kevintrankt/smart-mirror-readme)
-This README will provide users with the steps and tools needed to set up their own Voice Enabled Smart Mirror.
+The Voice Enabled Smart Mirror is a smart home project that allows information to be seen through a mirror. The Smart Mirror features customizable widgets, multi-user support, Amazon Alexa integration, facial recognition, and gesture based interaction. This README will provide users with the steps and tools needed to set up their own Voice Enabled Smart Mirror.
 ### Table of Contents
 
  - Repositories
@@ -11,6 +12,7 @@ This README will provide users with the steps and tools needed to set up their o
  - Installation
 	 - Hardware Setup
 	 - Software Setup
+		 - Amazon Alexa
  - Smart Mirror Config
 	 - Adding/Removing a User
 	 - Saving Your Config
@@ -108,6 +110,7 @@ You can test logging into each account by typing numbers associated to the user 
 	```
 
 The following steps will cover how to integrate voice control with Amazon Alexa with the Smart Mirror. These steps are optional if you do not meet the hardware requirements.
+##### Amazon Alexa
 1. Run ` sudo apt-get upgrade ` to get the necessary updates on terminal in the Raspberry Pi
 2. Get necessary files:
 ```bash
