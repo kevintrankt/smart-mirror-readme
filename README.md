@@ -1,11 +1,11 @@
 
+
 ## [Voice Enabled Smart Mirror](https://github.com/kevintrankt/smart-mirror-readme)
 The Voice Enabled Smart Mirror is a smart home project that allows information to be seen through a mirror. The Smart Mirror features customizable widgets, multi-user support, Amazon Alexa integration, facial recognition, and gesture based interaction. This README will provide users with the steps and tools needed to set up their own Voice Enabled Smart Mirror.
 
-### [Video Demo](https://youtu.be/EH-0puEEL3A)
-
 ### Table of Contents
 
+ - Video Demo
  - Repositories
  - Requirements
 	 - Hardware
@@ -35,6 +35,8 @@ The Voice Enabled Smart Mirror is a smart home project that allows information t
  - Making a Custom Widget
  - Configuring and Running Alexa
 
+### [Video Demo](https://youtu.be/EH-0puEEL3A)
+A demo of the Voice Enabled Smart Mirror can be viewed here https://youtu.be/EH-0puEEL3A.
 
 ### Repositories
 
